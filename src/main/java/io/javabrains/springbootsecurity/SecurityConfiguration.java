@@ -13,6 +13,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         // Set your configuration on the auth object
+        //auth.jdbcAuthentication OR auth.ldapAuthentication
         auth.inMemoryAuthentication()
                 .withUser("blah")
                 .password("blah")
